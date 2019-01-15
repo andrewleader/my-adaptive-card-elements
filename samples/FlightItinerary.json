@@ -2,6 +2,47 @@
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.0",
     "type": "AdaptiveCard",
+    "data": {
+        "passengers": [
+            {
+                "name": "Sarah Hum",
+                "seat": "14A"
+            },
+            {
+                "name": "Jeremy Goldberg",
+                "seat": "14B"
+            },
+            {
+                "name": "Evan Litvak",
+                "seat": "14C"
+            }
+        ],
+        "departingFlight": {
+            "stops": 2,
+            "departureTime": "2017-02-14T06:30:00Z",
+            "departureCity": {
+                "name": "San Francisco",
+                "shortName": "SFO"
+            },
+            "arrivalCity": {
+                "name": "Amsterdam",
+                "shortName": "AMS"
+            }
+        },
+        "returningFlight": {
+            "stops": 0,
+            "departureTime": "2017-02-20T02:50:00Z",
+            "departureCity": {
+                "name": "Amsterdam",
+                "shortName": "AMS"
+            },
+            "arrivalCity": {
+                "name": "San Francisco",
+                "shortName": "SFO"
+            }
+        },
+        "totalCost": "$4,032.54"
+    },
     "elements": {
         "FlightInfo": {
             "element": {
@@ -84,47 +125,6 @@
             }
         }
     },
-    "data": {
-        "passengers": [
-            {
-                "name": "Sarah Hum",
-                "seat": "14A"
-            },
-            {
-                "name": "Jeremy Goldberg",
-                "seat": "14B"
-            },
-            {
-                "name": "Evan Litvak",
-                "seat": "14C"
-            }
-        ],
-        "departingFlight": {
-            "stops": 2,
-            "departureTime": "2017-02-14T06:30:00Z",
-            "departureCity": {
-                "name": "San Francisco",
-                "shortName": "SFO"
-            },
-            "arrivalCity": {
-                "name": "Amsterdam",
-                "shortName": "AMS"
-            }
-        },
-        "returningFlight": {
-            "stops": 0,
-            "departureTime": "2017-02-20T02:50:00Z",
-            "departureCity": {
-                "name": "Amsterdam",
-                "shortName": "AMS"
-            },
-            "arrivalCity": {
-                "name": "San Francisco",
-                "shortName": "SFO"
-            }
-        },
-        "totalCost": "$4,032.54"
-    },
     "body": [
         {
             "type": "TextBlock",
@@ -147,6 +147,10 @@
         {
             "type": "FlightInfo",
             "flightInfo": "{data.departingFlight}"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Return info"
         },
         {
             "type": "FlightInfo",
@@ -175,7 +179,7 @@
                         {
                             "type": "TextBlock",
                             "horizontalAlignment": "right",
-                            "text": "$4,032.54",
+                            "text": "{data.totalCost}",
                             "size": "medium",
                             "weight": "bolder"
                         }
