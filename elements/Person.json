@@ -21,7 +21,7 @@
                     {
                         "type": "Image",
                         "style": "Person",
-                        "url": "{picture}",
+                        "url": "{data.picture}",
                         "size": "Small"
                     }
                 ],
@@ -35,7 +35,7 @@
                         "type": "TextBlock",
                         "size": "Medium",
                         "weight": "Bolder",
-                        "text": "{name}"
+                        "text": "{data.name}"
                     }
                 ],
                 "width": "stretch"
