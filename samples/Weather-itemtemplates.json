@@ -81,7 +81,7 @@
       },
       {
         "type": "ColumnSet",
-        "columns.datasource": [
+        "columns.itemsSource": [
             {
                 "dayShort": "Fri",
                 "dayFull": "Friday",
@@ -97,7 +97,7 @@
                 "icon": "http://messagecardplayground.azurewebsites.net/assets/Drizzle-Square.png"
             }
         ],
-        "columns.itemtemplate": {
+        "columns.itemTemplate": {
             "type": "Column",
             "width": "20",
             "items": [
